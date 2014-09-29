@@ -1,10 +1,8 @@
 {
-name "java"
-description "Install Oracle Java on Ubuntu"
-override_attributes(
-  "java" => {
-    "install_flavor" => "oracle"
-  }
-)
+"java":{
+   "oracle":{
+      "accept_oracle_download_terms":true
+    }
+},
   "run_list": [ "recipe[pointize_cookbook]" ]
 }
