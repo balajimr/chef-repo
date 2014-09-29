@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 include_recipe 'build-essential'
+include_recipe 'java::oracle'
+include_recipe 'tomcat6'
 include_recipe 'apache2'
 apache_site "default" do
   enable true
 end
-include_recipe 'java::oracle'
-include_recipe 'tomcat6'
