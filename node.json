@@ -1,4 +1,7 @@
 {
+"tomcat6":{
+    "java_home":"/usr"
+},
 "java":{
    "oracle":{
       "accept_oracle_download_terms":true
