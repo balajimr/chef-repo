@@ -18,7 +18,3 @@
 #
 include_recipe 'build-essential'
 include_recipe 'java::oracle'
-include_recipe 'apache2'
-apache_site "default" do
-  enable true
-end
