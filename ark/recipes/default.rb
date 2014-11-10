@@ -1,8 +1,9 @@
 #
-# Cookbook Name:: pointize_cookbook
+# Cookbook Name:: ark
 # Recipe:: default
 #
-# Copyright 2014, Bizsciences
+# Author:: Bryan W. Berry <bryan.berry@gmail.com>
+# Copyright 2012, Bryan W. Berry
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,6 +17,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include_recipe 'build-essential'
-#include_recipe 'java::oracle'
-include_recipe 'ark'
+
+Array(node['ark']['package_dependencies']).each do |pkg|
+  package pkg
+end
+
+include_recipe "7-zip" if node['platform_family'] == 'windows'
